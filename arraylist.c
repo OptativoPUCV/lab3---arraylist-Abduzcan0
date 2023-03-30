@@ -41,15 +41,14 @@ void push(ArrayList * l, void * data, int i){
         if (l == NULL) exit(EXIT_FAILURE);  
     }
     for(int u=l->size-1;u>=i;u--){
-        if(i==u){
+       
             
-            for(int k=l->size-1;k>i;k--){
-                l->data[k+1]=l->data[k];
-            }
+        l->data[u+1]=l->data[u];
+            
 
-            l->size++;
-            break;
-        }
+        l->size++;
+     
+        
         
     }
     l->data[i]=data;
