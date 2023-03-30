@@ -40,17 +40,11 @@ void push(ArrayList * l, void * data, int i){
         l->data =(void**) realloc(l->data,l->capacity*sizeof(void*));
         if (l == NULL) exit(EXIT_FAILURE);  
     }
-    for(int u=l->size-1;u>=i;u--){
-       
+    for(int u=l->size-1;u>=i;u--){  
             
-        l->data[u+1]=l->data[u];
-            
-
-        l->size++;
-     
-        
-        
+        l->data[u+1]=l->data[u];     
     }
+    l->size++;
     l->data[i]=data;
 }
 
